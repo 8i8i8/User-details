@@ -1,0 +1,51 @@
+.App {
+  text-align: center;
+}
+
+.inp {
+  background-color: rgb(99, 79, 52);
+  border-width: 2px;
+  color: aqua;
+}
+.a {
+  background-color: rgb(235, 226, 252);
+}
+.font {
+  font-family: "Dancing Script", cursive;
+  /* font-size: large; */
+  /* color: rgb(87, 98, 157); */
+  /* color: rgb(64, 74, 121); */
+  /* color: rgb(128, 61, 254); */
+  color: rgb(89, 46, 168);
+}
+.grey {
+  color: rgb(185, 185, 185);
+}
+.cursor {
+  cursor: pointer;
+}
+.footer {
+  color: rgb(173, 130, 253);
+}
+.header {
+  padding-bottom: 9px;
+  margin: 40px 0 20px;
+  border-bottom: 1px solid #eee;
+  border-color: rgb(173, 130, 253);
+}
+.logout {
+  color: rgb(173, 130, 253);
+  background-color: black;
+  /* background-color: rgb(221, 204, 204); */
+}
+.logout :hover {
+  color: rgb(173, 130, 253);
+  text-decoration: none;
+}
+.color {
+  color: black;
+}
+.complete {
+  background-color: rgb(133, 70, 250);
+  color: white;
+}
