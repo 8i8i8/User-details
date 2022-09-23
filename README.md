@@ -1,3 +1,10 @@
+website link https://food-voting.netlify.app/
+
+login details
+    username = amar
+    password = amar123
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
