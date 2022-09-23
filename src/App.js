@@ -1,29 +1,66 @@
 import "./App.css";
-import * as mdb from "mdb-ui-kit"; // lib
-import userData from "./userData";
-import SignIn from "./pages/signIn";
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
-import Voting from "./pages/voting";
-import authentication from "./authentication";
-
+import SignIn from "./pages/signIn/signIn";
+import {
+  BrowserRouter as Router,
+  Navigate,
+  Route,
+  Routes,
+} from "react-router-dom";
+import Voting from "./pages/voting/voting";
+import authentication from "./components/authentication";
+import Result from "./pages/Results/Results";
+import { useState } from "react";
+import ErrorBoundary from "./components/ErrorBoundary";
 function App() {
+  const [auth, setAuth] = useState(authentication());
+  const logout = () => {
+    localStorage.removeItem("loggedIn");
+    setAuth(false);
+  };
   return (
-    <div>
-      <BrowserRouter>
-        <Routes>
-          <Route
-            exact
-            path="/"
-            element={authentication() ? <Navigate to="/user" /> : <SignIn />}
-          />
-          <Route
-            exact
-            path="/user"
-            element={authentication() ? <Voting /> : <Navigate to="/" />}
-          />
-        </Routes>
-      </BrowserRouter>
-    </div>
+    <Router>
+      <Routes>
+        <Route
+          exact
+          path="/"
+          element={
+            auth ? (
+              <Navigate to="/user" />
+            ) : (
+              <ErrorBoundary>
+                <SignIn />
+              </ErrorBoundary>
+            )
+          }
+        />
+        <Route
+          exact
+          path="/user"
+          element={
+            !auth ? (
+              <Navigate to="/" />
+            ) : (
+              <ErrorBoundary>
+                <Voting logout={logout} />
+              </ErrorBoundary>
+            )
+          }
+        />
+        <Route
+          exact
+          path="/result"
+          element={
+            !auth ? (
+              <Navigate to="/" />
+            ) : (
+              <ErrorBoundary>
+                <Result logout={logout} />
+              </ErrorBoundary>
+            )
+          }
+        />
+      </Routes>
+    </Router>
   );
 }
 

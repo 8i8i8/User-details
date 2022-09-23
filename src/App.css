@@ -9,34 +9,36 @@
 }
 .a {
   background-color: rgb(235, 226, 252);
+  border-radius: 10px;
 }
 .font {
   font-family: "Dancing Script", cursive;
-  /* font-size: large; */
-  /* color: rgb(87, 98, 157); */
-  /* color: rgb(64, 74, 121); */
-  /* color: rgb(128, 61, 254); */
-  color: rgb(89, 46, 168);
+  font-family: "Merienda", cursive;
+  color: black;
+}
+.title {
+  font-family: "Dancing Script", cursive;
+  font-family: "Merienda", cursive;
+  color: rgba(127, 27, 249, 0.968);
 }
 .grey {
   color: rgb(185, 185, 185);
 }
-.cursor {
-  cursor: pointer;
-}
+
 .footer {
-  color: rgb(173, 130, 253);
+  color: rgba(127, 27, 249, 0.968);
 }
-.header {
-  padding-bottom: 9px;
-  margin: 40px 0 20px;
-  border-bottom: 1px solid #eee;
-  border-color: rgb(173, 130, 253);
+.footer:hover {
+  color: rgb(124, 20, 252);
 }
+
+.titleResult:hover {
+  color: black;
+}
+
 .logout {
   color: rgb(173, 130, 253);
   background-color: black;
-  /* background-color: rgb(221, 204, 204); */
 }
 .logout :hover {
   color: rgb(173, 130, 253);
@@ -46,6 +48,61 @@
   color: black;
 }
 .complete {
-  background-color: rgb(133, 70, 250);
+  background-color: rgb(108, 30, 253);
   color: white;
+}
+.complete:hover {
+  background-color: rgb(108, 30, 253);
+  color: white;
+}
+
+.scroll {
+  height: 70vh;
+  margin: 10px 0 0;
+  overflow-y: scroll;
+}
+.scroll2 {
+  height: 85vh;
+  margin: 40px 0 0;
+  overflow-y: scroll;
+}
+::-webkit-scrollbar {
+  background: black;
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(173, 130, 253);
+}
+.img {
+  width: 10%;
+  height: 10%;
+  color: bisque;
+}
+.rank1 {
+  color: rgb(91, 4, 253);
+}
+.rank2 {
+  color: rgba(91, 4, 252, 0.522);
+}
+.rank3 {
+  color: rgba(90, 6, 247, 0.216);
+}
+.rank1,
+.rank2,
+.rank3,
+.grey,
+.cursor {
+  cursor: pointer;
+}
+
+.bg {
+  background-color: rgb(176, 137, 247);
+}
+.result {
+  color: rgb(255, 215, 0);
+}
+.black {
+  color: black;
 }
